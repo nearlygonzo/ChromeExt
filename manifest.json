@@ -1,18 +1,19 @@
 {
-    "name": "Chrome Extension",
+    "manifest_version": 2,
+    "name": "Простой перевод",
     "version": "1.0",
-    "description": "My first extension for Chrome",
+
+    "icons": {
+        "48": "content/images/ico48.png"
+    },
 
     "permissions": [
-        "tabs",
-        "http://hubblesite.org/*"
+         "http://translate.yandex.net/*"
     ],
 
     "browser_action": {
-        "default_title": "Chrome_Ext",
-        "default_icon": "content/images/icon.png",
-        "popup": "src/popup.html"
-    },
-
-    "options_page": "src/options.html"
+        "default_title": "Открыть переводчик",
+        "default_icon": "content/images/ico48.png",
+        "default_popup": "src/view/popup.html"
+    }
 }
