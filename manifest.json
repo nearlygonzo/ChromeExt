@@ -1,0 +1,18 @@
+{
+    "name": "Chrome Extension",
+    "version": "1.0",
+    "description": "My first extension for Chrome",
+
+    "permissions": [
+        "tabs",
+        "http://hubblesite.org/*"
+    ],
+
+    "browser_action": {
+        "default_title": "Chrome_Ext",
+        "default_icon": "content/images/icon.png",
+        "popup": "src/popup.html"
+    },
+
+    "options_page": "src/options.html"
+}
