@@ -9,7 +9,8 @@ $(document).ready(function() {
     $('#btn_submit').click(function(e) {
         e.preventDefault();
         var input = $('#input').val();
-        var url = "http://translate.yandex.net/api/v1/tr.json/translate";
+        var key = "trnsl.1.1.20130722T121007Z.f15030650c3b3e9f.ff36bc77c618be26857549c92615aef55b33a0f1";
+        var url = "https://translate.yandex.net/api/v1.5/tr.json/translate?key=" + key + "&";
         var parent = /[а-яёЁ]/i;
         var language = (parent.test(input))? 'ru-en':'en-ru';
         $.getJSON(url, {lang: language, text: input}, function(res) {
